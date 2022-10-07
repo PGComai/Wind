@@ -1,0 +1,222 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sail.gd" type="Script" id=1]
+
+[sub_resource type="SpatialMaterial" id=40]
+flags_transparent = true
+flags_unshaded = true
+params_cull_mode = 2
+albedo_color = Color( 0.870588, 0.866667, 0.85098, 0.968627 )
+distance_fade_mode = 1
+distance_fade_min_distance = 3.34
+distance_fade_max_distance = 7.72
+
+[sub_resource type="PlaneMesh" id=41]
+material = SubResource( 40 )
+size = Vector2( 1.6, 2 )
+
+[sub_resource type="SpatialMaterial" id=43]
+
+[sub_resource type="SphereMesh" id=42]
+material = SubResource( 43 )
+
+[node name="ream" type="Spatial"]
+
+[node name="sail" type="RigidBody" parent="."]
+script = ExtResource( 1 )
+
+[node name="SoftBody" type="SoftBody" parent="sail"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 17
+mesh = SubResource( 41 )
+total_mass = 0.01
+linear_stiffness = 1.0
+pinned_points = [ 1 ]
+attachments/0/point_index = 1
+attachments/0/spatial_attachment_path = NodePath("..")
+attachments/0/offset = Vector3( -0.8, 0, 1 )
+
+[node name="testmesh" type="MeshInstance" parent="sail"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.8147e-06 )
+visible = false
+mesh = SubResource( 42 )
+
+[node name="sail2" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0 )
+script = ExtResource( 1 )
+
+[node name="SoftBody" type="SoftBody" parent="sail2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 17
+mesh = SubResource( 41 )
+total_mass = 0.01
+linear_stiffness = 1.0
+pinned_points = [ 1 ]
+attachments/0/point_index = 1
+attachments/0/spatial_attachment_path = NodePath("..")
+attachments/0/offset = Vector3( -0.8, 0, 1 )
+
+[node name="testmesh" type="MeshInstance" parent="sail2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.8147e-06 )
+visible = false
+mesh = SubResource( 42 )
+
+[node name="sail3" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0 )
+script = ExtResource( 1 )
+
+[node name="SoftBody" type="SoftBody" parent="sail3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 17
+mesh = SubResource( 41 )
+total_mass = 0.01
+linear_stiffness = 1.0
+pinned_points = [ 1 ]
+attachments/0/point_index = 1
+attachments/0/spatial_attachment_path = NodePath("..")
+attachments/0/offset = Vector3( -0.8, 0, 1 )
+
+[node name="testmesh" type="MeshInstance" parent="sail3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.8147e-06 )
+visible = false
+mesh = SubResource( 42 )
+
+[node name="sail4" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, 0 )
+script = ExtResource( 1 )
+
+[node name="SoftBody" type="SoftBody" parent="sail4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 17
+mesh = SubResource( 41 )
+total_mass = 0.01
+linear_stiffness = 1.0
+pinned_points = [ 1 ]
+attachments/0/point_index = 1
+attachments/0/spatial_attachment_path = NodePath("..")
+attachments/0/offset = Vector3( -0.8, 0, 1 )
+
+[node name="testmesh" type="MeshInstance" parent="sail4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.8147e-06 )
+visible = false
+mesh = SubResource( 42 )
+
+[node name="sail5" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0 )
+script = ExtResource( 1 )
+
+[node name="SoftBody" type="SoftBody" parent="sail5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 17
+mesh = SubResource( 41 )
+total_mass = 0.01
+linear_stiffness = 1.0
+pinned_points = [ 1 ]
+attachments/0/point_index = 1
+attachments/0/spatial_attachment_path = NodePath("..")
+attachments/0/offset = Vector3( -0.8, 0, 1 )
+
+[node name="testmesh" type="MeshInstance" parent="sail5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.8147e-06 )
+visible = false
+mesh = SubResource( 42 )
+
+[node name="sail6" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0 )
+script = ExtResource( 1 )
+
+[node name="SoftBody" type="SoftBody" parent="sail6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 17
+mesh = SubResource( 41 )
+total_mass = 0.01
+linear_stiffness = 1.0
+pinned_points = [ 1 ]
+attachments/0/point_index = 1
+attachments/0/spatial_attachment_path = NodePath("..")
+attachments/0/offset = Vector3( -0.8, 0, 1 )
+
+[node name="testmesh" type="MeshInstance" parent="sail6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.8147e-06 )
+visible = false
+mesh = SubResource( 42 )
+
+[node name="sail7" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0 )
+script = ExtResource( 1 )
+
+[node name="SoftBody" type="SoftBody" parent="sail7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 17
+mesh = SubResource( 41 )
+total_mass = 0.01
+linear_stiffness = 1.0
+pinned_points = [ 1 ]
+attachments/0/point_index = 1
+attachments/0/spatial_attachment_path = NodePath("..")
+attachments/0/offset = Vector3( -0.8, 0, 1 )
+
+[node name="testmesh" type="MeshInstance" parent="sail7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.8147e-06 )
+visible = false
+mesh = SubResource( 42 )
+
+[node name="sail8" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14, 0 )
+script = ExtResource( 1 )
+
+[node name="SoftBody" type="SoftBody" parent="sail8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 17
+mesh = SubResource( 41 )
+total_mass = 0.01
+linear_stiffness = 1.0
+pinned_points = [ 1 ]
+attachments/0/point_index = 1
+attachments/0/spatial_attachment_path = NodePath("..")
+attachments/0/offset = Vector3( -0.8, 0, 1 )
+
+[node name="testmesh" type="MeshInstance" parent="sail8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.8147e-06 )
+visible = false
+mesh = SubResource( 42 )
+
+[node name="sail9" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16, 0 )
+script = ExtResource( 1 )
+
+[node name="SoftBody" type="SoftBody" parent="sail9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 17
+mesh = SubResource( 41 )
+total_mass = 0.01
+linear_stiffness = 1.0
+pinned_points = [ 1 ]
+attachments/0/point_index = 1
+attachments/0/spatial_attachment_path = NodePath("..")
+attachments/0/offset = Vector3( -0.8, 0, 1 )
+
+[node name="testmesh" type="MeshInstance" parent="sail9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.8147e-06 )
+visible = false
+mesh = SubResource( 42 )
+
+[node name="sail10" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18, 0 )
+script = ExtResource( 1 )
+
+[node name="SoftBody" type="SoftBody" parent="sail10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 17
+mesh = SubResource( 41 )
+total_mass = 0.01
+linear_stiffness = 1.0
+pinned_points = [ 1 ]
+attachments/0/point_index = 1
+attachments/0/spatial_attachment_path = NodePath("..")
+attachments/0/offset = Vector3( -0.8, 0, 1 )
+
+[node name="testmesh" type="MeshInstance" parent="sail10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.8147e-06 )
+visible = false
+mesh = SubResource( 42 )

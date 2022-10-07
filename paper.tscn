@@ -21,19 +21,18 @@ size = Vector2( 1.6, 2 )
 material = SubResource( 43 )
 
 [node name="sail" type="RigidBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.153434, 157.689, -49.9432 )
 script = ExtResource( 1 )
 
 [node name="SoftBody" type="SoftBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.914226, -0.405205, 0, 0.405205, 0.914226, 0.9834, 0.393677, -0.949734 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 layers = 17
 mesh = SubResource( 41 )
 total_mass = 0.01
-linear_stiffness = 1.0
+drag_coefficient = 0.06
 pinned_points = [ 1 ]
 attachments/0/point_index = 1
 attachments/0/spatial_attachment_path = NodePath("..")
-attachments/0/offset = Vector3( 0.1834, -0.0115283, -0.0355077 )
+attachments/0/offset = Vector3( -0.8, 0, 1 )
 
 [node name="testmesh" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.8147e-06 )

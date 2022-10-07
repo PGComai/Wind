@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://addons/zylann.hterrain/hterrain.gd" type="Script" id=1]
 [ext_resource path="res://addons/zylann.hterrain/hterrain_texture_set.gd" type="Script" id=2]
@@ -46,7 +46,7 @@ initial_velocity = 4.49
 initial_velocity_random = 0.1
 radial_accel = -45.92
 radial_accel_random = 0.37
-tangential_accel = 5.5
+tangential_accel = -5.08
 tangential_accel_random = 0.08
 scale_random = 0.22
 color = Color( 1, 0.780392, 0.666667, 1 )
@@ -151,8 +151,6 @@ distance_fade_max_distance = 7.26
 material = SubResource( 27 )
 radius = 3.0
 height = 6.0
-
-[sub_resource type="SphereMesh" id=44]
 
 [node name="Spatial" type="Spatial"]
 
@@ -273,11 +271,7 @@ process_material = SubResource( 26 )
 draw_pass_1 = SubResource( 28 )
 script = ExtResource( 9 )
 
-[node name="Attractor" type="Spatial" parent="KinematicBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.74696, 0, 0 )
-visible = false
-
-[node name="attractortest" type="MeshInstance" parent="KinematicBody/Attractor"]
-mesh = SubResource( 44 )
-
 [node name="sail" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.153434, 177.934, -49.9432 )
+mass = 0.00204082
+gravity_scale = 0.13
