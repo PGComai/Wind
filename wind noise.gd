@@ -24,7 +24,7 @@ func _process(delta):
 		stream_paused = true
 	else:
 		stream_paused = false
-		volume_db = lerp(volume_db, speed - 47, 0.1)
+		volume_db = lerp(volume_db, speed - 36, 0.1)
 		pitch_mod = range_lerp(speed, 0, 50, 1, 2)
 		pitch_scale = lerp(pitch_scale, pitch_mod, 0.1)
 		

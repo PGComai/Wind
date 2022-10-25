@@ -1,0 +1,320 @@
+[gd_scene load_steps=51 format=2]
+
+[ext_resource path="res://assets/dust circle.tres" type="Material" id=1]
+[ext_resource path="res://gusto.gd" type="Script" id=2]
+[ext_resource path="res://dust.gd" type="Script" id=3]
+[ext_resource path="res://CamRoot.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/wind sounds/wind longer.ogg" type="AudioStream" id=5]
+[ext_resource path="res://wind noise.gd" type="Script" id=6]
+[ext_resource path="res://wind.gd" type="Script" id=7]
+[ext_resource path="res://tornado.gd" type="Script" id=8]
+
+[sub_resource type="CapsuleShape" id=39]
+
+[sub_resource type="CubeMesh" id=7]
+
+[sub_resource type="Curve" id=22]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.5, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=23]
+curve = SubResource( 22 )
+
+[sub_resource type="ParticlesMaterial" id=8]
+trail_divisor = 92
+trail_size_modifier = SubResource( 23 )
+emission_shape = 1
+emission_sphere_radius = 4.7
+spread = 6.02
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 4.49
+initial_velocity_random = 0.1
+radial_accel = -45.92
+radial_accel_random = 0.37
+tangential_accel = -5.08
+tangential_accel_random = 0.08
+scale_random = 0.22
+color = Color( 1, 0.780392, 0.666667, 1 )
+hue_variation_random = 0.91
+
+[sub_resource type="SpatialMaterial" id=20]
+flags_unshaded = true
+albedo_color = Color( 1, 1, 1, 0.333333 )
+distance_fade_mode = 1
+distance_fade_min_distance = 4.76
+distance_fade_max_distance = 10.0
+
+[sub_resource type="SphereMesh" id=21]
+material = SubResource( 20 )
+radius = 0.05
+height = 0.1
+
+[sub_resource type="Curve" id=24]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.502681, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=25]
+curve = SubResource( 24 )
+
+[sub_resource type="ParticlesMaterial" id=14]
+trail_divisor = 150
+trail_size_modifier = SubResource( 25 )
+emission_shape = 1
+emission_sphere_radius = 9.95
+direction = Vector3( 0, 0, 1 )
+spread = 5.16
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+initial_velocity_random = 0.08
+linear_accel = 0.22
+
+[sub_resource type="SpatialMaterial" id=15]
+flags_transparent = true
+flags_unshaded = true
+albedo_color = Color( 1, 1, 1, 0.847059 )
+refraction_enabled = true
+refraction_scale = 0.05
+refraction_texture_channel = 0
+distance_fade_mode = 1
+distance_fade_min_distance = 4.53
+distance_fade_max_distance = 13.34
+
+[sub_resource type="CubeMesh" id=16]
+material = SubResource( 15 )
+size = Vector3( 0.02, 0.02, 1 )
+
+[sub_resource type="SphereMesh" id=17]
+
+[sub_resource type="SpatialMaterial" id=18]
+
+[sub_resource type="CylinderMesh" id=19]
+top_radius = 0.078
+
+[sub_resource type="Gradient" id=40]
+offsets = PoolRealArray( 0, 0.776471, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.776471, 0.776471, 0.776471, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=41]
+gradient = SubResource( 40 )
+
+[sub_resource type="Curve" id=31]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.213137, 0.782975 ), 1.69507, 1.69507, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=32]
+curve = SubResource( 31 )
+
+[sub_resource type="Gradient" id=33]
+resource_local_to_scene = true
+offsets = PoolRealArray( 0, 0.473529, 1 )
+colors = PoolColorArray( 0.501961, 0.443137, 0.368627, 0, 0.501961, 0.443137, 0.368627, 0.85098, 0.501961, 0.443137, 0.368627, 0 )
+
+[sub_resource type="GradientTexture" id=34]
+gradient = SubResource( 33 )
+
+[sub_resource type="Curve" id=35]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.497319, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=36]
+curve = SubResource( 35 )
+
+[sub_resource type="ParticlesMaterial" id=26]
+trail_divisor = 32
+trail_size_modifier = SubResource( 36 )
+trail_color_modifier = SubResource( 34 )
+emission_shape = 5
+emission_ring_radius = 2.0
+emission_ring_inner_radius = 0.0
+emission_ring_height = 0.02
+emission_ring_axis = Vector3( 0, 1, 0 )
+direction = Vector3( 0, 1, 0 )
+spread = 180.0
+flatness = 1.0
+gravity = Vector3( 0, 60, 0 )
+initial_velocity = 6.37
+linear_accel = 7.64
+linear_accel_random = 0.77
+radial_accel = -100.0
+radial_accel_random = 0.06
+tangential_accel = 9.68
+scale_curve = SubResource( 32 )
+color = Color( 0.972549, 0.666667, 0.537255, 0.203922 )
+color_ramp = SubResource( 41 )
+
+[sub_resource type="SphereMesh" id=28]
+material = ExtResource( 1 )
+radius = 3.0
+height = 6.0
+
+[sub_resource type="Curve" id=42]
+_data = [ Vector2( 0, 0.43865 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=43]
+curve = SubResource( 42 )
+
+[sub_resource type="ParticlesMaterial" id=44]
+direction = Vector3( 0, 1, 0 )
+spread = 7.9
+initial_velocity = 63.41
+linear_accel = -89.76
+radial_accel = 22.93
+tangential_accel = -90.73
+damping = 30.24
+scale = 2.9
+scale_random = 0.16
+scale_curve = SubResource( 43 )
+color = Color( 0.807843, 0.560784, 0.454902, 0.203922 )
+color_ramp = SubResource( 41 )
+
+[sub_resource type="SpatialMaterial" id=45]
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_depth_draw_mode = 3
+
+[sub_resource type="SphereMesh" id=46]
+material = SubResource( 45 )
+
+[sub_resource type="SpatialMaterial" id=55]
+render_priority = -1
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SphereMesh" id=56]
+material = SubResource( 55 )
+radius = 1.1
+height = 2.2
+
+[sub_resource type="Curve" id=47]
+max_value = 100.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 89.1104 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=48]
+curve = SubResource( 47 )
+
+[sub_resource type="Curve" id=49]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=50]
+curve = SubResource( 49 )
+
+[sub_resource type="Curve" id=51]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=52]
+curve = SubResource( 51 )
+
+[sub_resource type="ParticlesMaterial" id=53]
+emission_shape = 5
+emission_ring_radius = 20.0
+emission_ring_inner_radius = 18.0
+emission_ring_height = 2.0
+emission_ring_axis = Vector3( 0, 1, 0 )
+direction = Vector3( 0, -1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 10, 0 )
+initial_velocity = 18.51
+linear_accel = -49.76
+radial_accel = -100.0
+tangential_accel = 22.93
+tangential_accel_curve = SubResource( 52 )
+damping_curve = SubResource( 48 )
+scale_curve = SubResource( 50 )
+color = Color( 0.807843, 0.560784, 0.454902, 0.203922 )
+color_ramp = SubResource( 41 )
+
+[sub_resource type="SphereMesh" id=54]
+material = SubResource( 45 )
+
+[sub_resource type="SpatialMaterial" id=57]
+render_priority = -1
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_depth_draw_mode = 3
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SphereMesh" id=58]
+material = SubResource( 57 )
+radius = 1.1
+height = 2.2
+
+[node name="KinematicBody" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 150.905, 0 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+shape = SubResource( 39 )
+
+[node name="CamRoot" parent="." instance=ExtResource( 4 )]
+
+[node name="character mesh" type="MeshInstance" parent="."]
+visible = false
+mesh = SubResource( 7 )
+
+[node name="main vortex" type="Particles" parent="."]
+cast_shadow = 0
+amount = 74
+lifetime = 4.58
+explosiveness = 0.15
+randomness = 0.12
+process_material = SubResource( 8 )
+draw_pass_1 = SubResource( 21 )
+
+[node name="Velocity" type="Spatial" parent="."]
+
+[node name="speed trails" type="Particles" parent="Velocity"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30.044 )
+amount = 250
+lifetime = 5.15
+speed_scale = 7.55
+explosiveness = 0.04
+randomness = 0.17
+process_material = SubResource( 14 )
+draw_pass_1 = SubResource( 16 )
+script = ExtResource( 7 )
+
+[node name="trail source mesh" type="MeshInstance" parent="Velocity/speed trails"]
+visible = false
+mesh = SubResource( 17 )
+material/0 = SubResource( 18 )
+
+[node name="velocity vector" type="MeshInstance" parent="Velocity"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
+visible = false
+mesh = SubResource( 19 )
+
+[node name="wind noise" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+script = ExtResource( 6 )
+
+[node name="RayCast" type="RayCast" parent="."]
+enabled = true
+cast_to = Vector3( 0, -40, 0 )
+collision_mask = 512
+
+[node name="dust" type="Particles" parent="RayCast"]
+amount = 62
+lifetime = 5.12
+speed_scale = 1.49
+explosiveness = 0.13
+randomness = 0.11
+process_material = SubResource( 26 )
+draw_pass_1 = SubResource( 28 )
+script = ExtResource( 3 )
+
+[node name="tornado" type="Particles" parent="RayCast"]
+amount = 63
+process_material = SubResource( 44 )
+draw_passes = 2
+draw_pass_1 = SubResource( 46 )
+draw_pass_2 = SubResource( 56 )
+script = ExtResource( 8 )
+
+[node name="tornado_buildup" type="Particles" parent="RayCast/tornado"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.26782, 0 )
+amount = 43
+process_material = SubResource( 53 )
+draw_passes = 2
+draw_pass_1 = SubResource( 54 )
+draw_pass_2 = SubResource( 58 )

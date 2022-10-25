@@ -26,7 +26,6 @@ material = SubResource( 43 )
 script = ExtResource( 1 )
 
 [node name="SoftBody" type="SoftBody" parent="sail"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 layers = 17
 mesh = SubResource( 41 )
 total_mass = 0.01
@@ -46,7 +45,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0 )
 script = ExtResource( 1 )
 
 [node name="SoftBody" type="SoftBody" parent="sail2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 layers = 17
 mesh = SubResource( 41 )
 total_mass = 0.01
@@ -66,7 +64,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0 )
 script = ExtResource( 1 )
 
 [node name="SoftBody" type="SoftBody" parent="sail3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 layers = 17
 mesh = SubResource( 41 )
 total_mass = 0.01
@@ -86,7 +83,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, 0 )
 script = ExtResource( 1 )
 
 [node name="SoftBody" type="SoftBody" parent="sail4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 layers = 17
 mesh = SubResource( 41 )
 total_mass = 0.01
@@ -106,7 +102,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0 )
 script = ExtResource( 1 )
 
 [node name="SoftBody" type="SoftBody" parent="sail5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 layers = 17
 mesh = SubResource( 41 )
 total_mass = 0.01
@@ -126,7 +121,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0 )
 script = ExtResource( 1 )
 
 [node name="SoftBody" type="SoftBody" parent="sail6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 layers = 17
 mesh = SubResource( 41 )
 total_mass = 0.01
@@ -146,7 +140,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0 )
 script = ExtResource( 1 )
 
 [node name="SoftBody" type="SoftBody" parent="sail7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 layers = 17
 mesh = SubResource( 41 )
 total_mass = 0.01
@@ -166,7 +159,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14, 0 )
 script = ExtResource( 1 )
 
 [node name="SoftBody" type="SoftBody" parent="sail8"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 layers = 17
 mesh = SubResource( 41 )
 total_mass = 0.01
@@ -186,7 +178,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16, 0 )
 script = ExtResource( 1 )
 
 [node name="SoftBody" type="SoftBody" parent="sail9"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 layers = 17
 mesh = SubResource( 41 )
 total_mass = 0.01
@@ -206,7 +197,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18, 0 )
 script = ExtResource( 1 )
 
 [node name="SoftBody" type="SoftBody" parent="sail10"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 layers = 17
 mesh = SubResource( 41 )
 total_mass = 0.01

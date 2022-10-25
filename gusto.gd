@@ -1,6 +1,6 @@
 extends KinematicBody
 
-export var speed = 50
+export var speed = -50
 export var strength = 5
 export var spin = 5
 
@@ -20,6 +20,10 @@ func _ready():
 	pass # Replace with function body.
 
 func _unhandled_input(event):
+	#if event.is_action_pressed("boost"):
+		#speed = lerp(speed, 20, 0.1)
+	#else:
+		#speed = lerp(speed, 50, 0.1)
 	if event.is_action_pressed("click"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		
@@ -39,7 +43,6 @@ func _physics_process(delta):
 	else:
 		slow_down()
 	#velocity = velocity.rotated(Vector3.UP, h_rot)
-	
 	velocity = move_and_slide(velocity, Vector3.UP)
 	#spin_attractor(delta)
 	

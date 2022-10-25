@@ -1,0 +1,8 @@
+{
+	"contains_albedo": true,
+	"resolution": 512,
+	"src": {
+		"a": "#ff888888",
+		"rgb": "res://addons/kenney_prototype_textures/orange/texture_05.png"
+	}
+}

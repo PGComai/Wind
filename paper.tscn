@@ -24,7 +24,6 @@ material = SubResource( 43 )
 script = ExtResource( 1 )
 
 [node name="SoftBody" type="SoftBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 layers = 17
 mesh = SubResource( 41 )
 total_mass = 0.01
