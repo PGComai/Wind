@@ -20,9 +20,9 @@ func _process(delta):
 		process_material.emission_ring_radius = height / 2
 		draw_pass_1.radius = 3 - (height/7)
 		draw_pass_1.height = draw_pass_1.radius * 2
-		dust_color = draw_pass_1.material.albedo_color
-		dust_color.a = range_lerp(height, 40, 0, 0, 0.3)
-		draw_pass_1.material.albedo_color = dust_color
+		#dust_color = draw_pass_1.material.shader_param/dust_color
+		#dust_color.a = range_lerp(height, 40, 0, 0, 0.3)
+		#draw_pass_1.material.albedo_color = dust_color
 		process_material.gravity.y = 60 - (height)
 		global_translation.y = get_parent().get_collision_point().y
 	else:

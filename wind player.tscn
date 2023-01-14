@@ -1,6 +1,6 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=42 format=2]
 
-[ext_resource path="res://assets/dust circle.tres" type="Material" id=1]
+[ext_resource path="res://dust.tres" type="Material" id=1]
 [ext_resource path="res://gusto.gd" type="Script" id=2]
 [ext_resource path="res://dust.gd" type="Script" id=3]
 [ext_resource path="res://CamRoot.tscn" type="PackedScene" id=4]
@@ -70,9 +70,6 @@ linear_accel = 0.22
 flags_transparent = true
 flags_unshaded = true
 albedo_color = Color( 1, 1, 1, 0.847059 )
-refraction_enabled = true
-refraction_scale = 0.05
-refraction_texture_channel = 0
 distance_fade_mode = 1
 distance_fade_min_distance = 4.53
 distance_fade_max_distance = 13.34
@@ -88,37 +85,14 @@ size = Vector3( 0.02, 0.02, 1 )
 [sub_resource type="CylinderMesh" id=19]
 top_radius = 0.078
 
-[sub_resource type="Gradient" id=40]
-offsets = PoolRealArray( 0, 0.776471, 1 )
-colors = PoolColorArray( 1, 1, 1, 1, 0.776471, 0.776471, 0.776471, 1, 1, 1, 1, 0 )
-
-[sub_resource type="GradientTexture" id=41]
-gradient = SubResource( 40 )
-
 [sub_resource type="Curve" id=31]
-_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.213137, 0.782975 ), 1.69507, 1.69507, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.904826, 0.859663 ), -1.99776, -1.99776, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
 [sub_resource type="CurveTexture" id=32]
 curve = SubResource( 31 )
 
-[sub_resource type="Gradient" id=33]
-resource_local_to_scene = true
-offsets = PoolRealArray( 0, 0.473529, 1 )
-colors = PoolColorArray( 0.501961, 0.443137, 0.368627, 0, 0.501961, 0.443137, 0.368627, 0.85098, 0.501961, 0.443137, 0.368627, 0 )
-
-[sub_resource type="GradientTexture" id=34]
-gradient = SubResource( 33 )
-
-[sub_resource type="Curve" id=35]
-_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.497319, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
-
-[sub_resource type="CurveTexture" id=36]
-curve = SubResource( 35 )
-
 [sub_resource type="ParticlesMaterial" id=26]
-trail_divisor = 32
-trail_size_modifier = SubResource( 36 )
-trail_color_modifier = SubResource( 34 )
+trail_divisor = 20
 emission_shape = 5
 emission_ring_radius = 2.0
 emission_ring_inner_radius = 0.0
@@ -135,13 +109,18 @@ radial_accel = -100.0
 radial_accel_random = 0.06
 tangential_accel = 9.68
 scale_curve = SubResource( 32 )
-color = Color( 0.972549, 0.666667, 0.537255, 0.203922 )
-color_ramp = SubResource( 41 )
 
 [sub_resource type="SphereMesh" id=28]
 material = ExtResource( 1 )
 radius = 3.0
 height = 6.0
+
+[sub_resource type="Gradient" id=40]
+offsets = PoolRealArray( 0, 0.776471, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.776471, 0.776471, 0.776471, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=41]
+gradient = SubResource( 40 )
 
 [sub_resource type="Curve" id=42]
 _data = [ Vector2( 0, 0.43865 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
@@ -163,26 +142,8 @@ scale_curve = SubResource( 43 )
 color = Color( 0.807843, 0.560784, 0.454902, 0.203922 )
 color_ramp = SubResource( 41 )
 
-[sub_resource type="SpatialMaterial" id=45]
-flags_transparent = true
-flags_unshaded = true
-vertex_color_use_as_albedo = true
-params_depth_draw_mode = 3
-
 [sub_resource type="SphereMesh" id=46]
-material = SubResource( 45 )
-
-[sub_resource type="SpatialMaterial" id=55]
-render_priority = -1
-flags_transparent = true
-flags_unshaded = true
-vertex_color_use_as_albedo = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SphereMesh" id=56]
-material = SubResource( 55 )
-radius = 1.1
-height = 2.2
+material = ExtResource( 1 )
 
 [sub_resource type="Curve" id=47]
 max_value = 100.0
@@ -223,20 +184,7 @@ color = Color( 0.807843, 0.560784, 0.454902, 0.203922 )
 color_ramp = SubResource( 41 )
 
 [sub_resource type="SphereMesh" id=54]
-material = SubResource( 45 )
-
-[sub_resource type="SpatialMaterial" id=57]
-render_priority = -1
-flags_transparent = true
-flags_unshaded = true
-vertex_color_use_as_albedo = true
-params_depth_draw_mode = 3
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SphereMesh" id=58]
-material = SubResource( 57 )
-radius = 1.1
-height = 2.2
+material = ExtResource( 1 )
 
 [node name="KinematicBody" type="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 150.905, 0 )
@@ -265,7 +213,7 @@ draw_pass_1 = SubResource( 21 )
 
 [node name="speed trails" type="Particles" parent="Velocity"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30.044 )
-amount = 250
+amount = 50
 lifetime = 5.15
 speed_scale = 7.55
 explosiveness = 0.04
@@ -297,7 +245,6 @@ collision_mask = 512
 amount = 62
 lifetime = 5.12
 speed_scale = 1.49
-explosiveness = 0.13
 randomness = 0.11
 process_material = SubResource( 26 )
 draw_pass_1 = SubResource( 28 )
@@ -306,15 +253,11 @@ script = ExtResource( 3 )
 [node name="tornado" type="Particles" parent="RayCast"]
 amount = 63
 process_material = SubResource( 44 )
-draw_passes = 2
 draw_pass_1 = SubResource( 46 )
-draw_pass_2 = SubResource( 56 )
 script = ExtResource( 8 )
 
 [node name="tornado_buildup" type="Particles" parent="RayCast/tornado"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.26782, 0 )
 amount = 43
 process_material = SubResource( 53 )
-draw_passes = 2
 draw_pass_1 = SubResource( 54 )
-draw_pass_2 = SubResource( 58 )
